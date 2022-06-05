@@ -33,11 +33,7 @@ angle1= 0
 
 angle2=0
 #radius = 200
-#class clock:
-   # def __init__(self,color,angle,radius):
-    #    self.color = color
-     #   self.angle = angle
-      #  self.radius = radius
+
 def time1():
     global angle
     ti= datetime.now()
@@ -52,21 +48,7 @@ def time1():
             if na2 == ws[char+str(i)].value:
                 angle = ws[char2+str(i)].value          
                 
-    '''for m in range(1,60):
-        for n in range(3,5):
-            char = get_column_letter(n)
-            for o in range(3,4):
-                char2 = get_column_letter(o)
-            if na1 == ws[char+str(i)].value:
-                angle1 = ws[char2+str(i)].value
-                
-    for p in range(1,60):
-        for q in range(5,7):
-            char = get_column_letter(q)
-            for s in range(5,6):
-                char2 = get_column_letter(s)
-            if na == ws[char+str(i)].value:
-                angle2 = ws[char2+str(i)].value'''           
+          
     draw = font.render(time2,True,black)
     win.blit(draw, draw.get_rect(center = cpt))
     draw1 = font.render(str(12),True,black)
@@ -176,26 +158,12 @@ while run:
     pt_x2 = cpt[0] + 100 * math.sin(angle2_rad)
     pt_y2 = cpt[1] - 100 * math.cos(angle2_rad)
 
-    
-    
+ 
     win.fill(white)
-    '''pygame.draw.circle(win,black,(400,400),200,3)
-    pygame.draw.line(win, yellow, cpt, (pt_x, pt_y), 2)
-    pygame.draw.line(win, red, cpt, (pt_x1, pt_y1), 2)
-    pygame.draw.line(win, blueblack, cpt, (pt_x2, pt_y2), 2)
-    #pygame.draw.line(win, yellow, cpt, (cpt[0], cpt[1]-200), 2)
-    #text = font.render(str(angle), True, (255, 0, 0))
-    #win.blit(text, text.get_rect(center = cpt))'''
+
     time1()
     time2()
     time3()
-    #na=(time3.tm_hour*60*60)+(time3.tm_min*60)+(time3.tm_sec)
-    #na1=((time3.tm_min*60)+(time3.tm_sec))
-    #na2=((time3.tm_sec))
-    #print(na)
-    
-    
-
 
     pygame.display.update()
 pygame.quit()
