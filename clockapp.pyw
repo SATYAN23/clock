@@ -12,9 +12,7 @@ wb1 = load_workbook('Book5.xlsx')
 
 ws = wb.active
 ws1 = wb1.active
-print(ws['A1'].value)
 
-print(ws['B60'].value)
 
 width = 800
 height = 800
@@ -32,7 +30,7 @@ angle=0
 angle1= 0
 
 angle2=0
-#radius = 200
+
 
 def time1():
     global angle
@@ -86,8 +84,7 @@ def time1():
     #pygame.draw.line(win, blueblack, cpt, (pt_x2, pt_y2), 2)
     
     return angle
-    #return angle1
-    #return angle2
+
 
 
 def time2():
