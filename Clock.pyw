@@ -9,7 +9,7 @@ pygame.init()
 
 
 os.environ['SDL_VIDEO_WINDOW_POS'] = "%d, %d" %((73.15*width)/100, (46.67*height)/100)
-i_icon = os.getcwd() + '.\data\C.png'
+i_icon = os.getcwd() + '.\C.png'
 icon = pygame.image.load(i_icon)
 pygame.display.set_icon(icon)
 
